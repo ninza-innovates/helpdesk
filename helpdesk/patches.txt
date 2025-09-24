@@ -1,0 +1,24 @@
+[pre_model_sync]
+helpdesk.patches.change_app_name_to_helpdesk
+helpdesk.patches.rename_doctypes_prefix_with_hd
+helpdesk.patches.rename_frappedesk_module_references
+helpdesk.patches.naming_autoincrement
+
+[post_model_sync]
+execute:frappe.delete_doc("Workspace", "Frappe Desk", force=True)
+helpdesk.patches.add_priority_integer
+helpdesk.patches.template_remove_default_fields
+helpdesk.helpdesk.doctype.hd_ticket.patches.fallback_ticket_type
+execute:frappe.delete_doc("Server Script", "Ticket Auto Set Custom Fields", ignore_missing=True)
+helpdesk.helpdesk.doctype.hd_ticket_feedback_option.patches.ootb
+helpdesk.helpdesk.doctype.hd_ticket_feedback_option.patches.label_as_name
+helpdesk.helpdesk.doctype.hd_service_level_agreement.patches.missing_sla_creation
+helpdesk.helpdesk.doctype.hd_ticket.patches.replace_overdue_failed
+helpdesk.patches.create_helpdesk_folder
+helpdesk.helpdesk.doctype.hd_ticket.patches.feedback_in_master
+helpdesk.helpdesk.doctype.hd_ticket.patches.first_responded_on
+helpdesk.patches.update_hd_team_users
+helpdesk.patches.default_article_category #v2
+helpdesk.patches.communication_read_perm_agent
+helpdesk.patches.agent_manager_perms
+helpdesk.patches.remove_agents_teams_default_views 

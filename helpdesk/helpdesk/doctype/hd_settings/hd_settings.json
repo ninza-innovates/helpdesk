@@ -1,0 +1,319 @@
+{
+ "actions": [],
+ "creation": "2017-02-17 13:07:35.686409",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "priority_section",
+  "default_priority",
+  "column_break_nvbf",
+  "agent_groups_section",
+  "restrict_tickets_by_agent_group",
+  "do_not_restrict_tickets_without_an_agent_group",
+  "column_break_dxlq",
+  "assignment_rules_section",
+  "base_support_rotation",
+  "knowledge_base_section",
+  "prefer_knowledge_base",
+  "ticket_tab",
+  "ticket_type_section",
+  "default_ticket_type",
+  "is_ticket_type_mandatory",
+  "column_break_zxek",
+  "ticket_restrictions_section",
+  "allow_anyone_to_create_tickets",
+  "is_feedback_mandatory",
+  "auto_update_status",
+  "column_break_iarl",
+  "auto_close_tickets",
+  "auto_close_after_days",
+  "workflow_tab",
+  "skip_email_workflow",
+  "instantly_send_email",
+  "column_break_aomm",
+  "branding_tab",
+  "images_column",
+  "brand_logo",
+  "column_break_fsjn",
+  "misc_tab",
+  "setup_section",
+  "setup_complete",
+  "initial_helpdesk_name_setup_skipped",
+  "column_break_hjfh",
+  "search_tab",
+  "name_weight",
+  "subject_weight",
+  "column_break_qoxt",
+  "description_weight",
+  "headings_weight"
+ ],
+ "fields": [
+  {
+   "fieldname": "assignment_rules_section",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Assignment Rules"
+  },
+  {
+   "fieldname": "base_support_rotation",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Base Support Rotation",
+   "options": "Assignment Rule",
+   "read_only": 1
+  },
+  {
+   "fieldname": "knowledge_base_section",
+   "fieldtype": "Section Break",
+   "label": "Knowledge Base"
+  },
+  {
+   "fieldname": "agent_groups_section",
+   "fieldtype": "Section Break",
+   "label": "Team Restrictions"
+  },
+  {
+   "default": "0",
+   "fieldname": "restrict_tickets_by_agent_group",
+   "fieldtype": "Check",
+   "label": "Restrict tickets by Team"
+  },
+  {
+   "fieldname": "column_break_dxlq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "depends_on": "restrict_tickets_by_agent_group",
+   "fieldname": "do_not_restrict_tickets_without_an_agent_group",
+   "fieldtype": "Check",
+   "label": "Do not restrict tickets without a Team"
+  },
+  {
+   "fieldname": "misc_tab",
+   "fieldtype": "Tab Break",
+   "label": "Misc"
+  },
+  {
+   "fieldname": "setup_section",
+   "fieldtype": "Section Break",
+   "label": "Setup"
+  },
+  {
+   "default": "0",
+   "fieldname": "setup_complete",
+   "fieldtype": "Check",
+   "label": "Is setup complete"
+  },
+  {
+   "default": "0",
+   "fieldname": "initial_helpdesk_name_setup_skipped",
+   "fieldtype": "Check",
+   "label": "Is name setup skipped"
+  },
+  {
+   "fieldname": "column_break_hjfh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ticket_type_section",
+   "fieldtype": "Section Break",
+   "label": "Ticket Type"
+  },
+  {
+   "fieldname": "default_ticket_type",
+   "fieldtype": "Link",
+   "label": "Default ticket type",
+   "options": "HD Ticket Type"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_ticket_type_mandatory",
+   "fieldtype": "Check",
+   "label": "Ticket type is mandatory"
+  },
+  {
+   "fieldname": "column_break_zxek",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "workflow_tab",
+   "fieldtype": "Tab Break",
+   "label": "Workflow"
+  },
+  {
+   "default": "0",
+   "description": "This field is used to skip email-related workflows for tickets. If this field is checked, no emails will be sent related to tickets, such as new ticket creation, status updates, or notifications.",
+   "fieldname": "skip_email_workflow",
+   "fieldtype": "Check",
+   "label": "Skip e-mail workflow"
+  },
+  {
+   "fieldname": "column_break_aomm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "description": "This field is used to send an email instantly without adding it into the queue. If this field is checked, the email will be sent immediately after clicking the \"Send\" button, instead of being added to the email queue for later processing.",
+   "fieldname": "instantly_send_email",
+   "fieldtype": "Check",
+   "label": "Instantly send e-mail"
+  },
+  {
+   "fieldname": "branding_tab",
+   "fieldtype": "Tab Break",
+   "label": "Branding"
+  },
+  {
+   "fieldname": "images_column",
+   "fieldtype": "Column Break",
+   "label": "Images"
+  },
+  {
+   "description": "Image to be used in various places, including Login and Signup pages. An image with transparent background and 160 x 32 is preferred",
+   "fieldname": "brand_logo",
+   "fieldtype": "Attach Image",
+   "label": "Logo"
+  },
+  {
+   "fieldname": "column_break_fsjn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "prefer_knowledge_base",
+   "fieldtype": "Check",
+   "label": "Prefer knowledge base"
+  },
+  {
+   "fieldname": "priority_section",
+   "fieldtype": "Section Break",
+   "label": "Priority"
+  },
+  {
+   "fieldname": "default_priority",
+   "fieldtype": "Link",
+   "label": "Default priority",
+   "options": "HD Ticket Priority"
+  },
+  {
+   "fieldname": "column_break_nvbf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "search_tab",
+   "fieldtype": "Tab Break",
+   "label": "Search"
+  },
+  {
+   "default": "1",
+   "fieldname": "name_weight",
+   "fieldtype": "Int",
+   "label": "Name Weight"
+  },
+  {
+   "default": "6",
+   "fieldname": "subject_weight",
+   "fieldtype": "Int",
+   "label": "Subject Weight"
+  },
+  {
+   "default": "5",
+   "fieldname": "description_weight",
+   "fieldtype": "Int",
+   "label": "Description Weight"
+  },
+  {
+   "fieldname": "column_break_qoxt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "8",
+   "fieldname": "headings_weight",
+   "fieldtype": "Int",
+   "label": "Headings Weight"
+  },
+  {
+   "fieldname": "ticket_tab",
+   "fieldtype": "Tab Break",
+   "label": "Ticket"
+  },
+  {
+   "fieldname": "ticket_restrictions_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "description": "If enabled, anyone will be able to create tickets (without any permission). ",
+   "fieldname": "allow_anyone_to_create_tickets",
+   "fieldtype": "Check",
+   "label": "Allow anyone to create tickets"
+  },
+  {
+   "default": "0",
+   "description": "When enabled, the ticket status will automatically change to \"Replied\" whenever the agent responds to a ticket.\n",
+   "fieldname": "auto_update_status",
+   "fieldtype": "Check",
+   "label": "Auto update status"
+  },
+  {
+   "default": "1",
+   "description": "If enabled, the feedback dialog will be shown, when a user tries to close a ticket. \n",
+   "fieldname": "is_feedback_mandatory",
+   "fieldtype": "Check",
+   "label": "Make feedback mandatory"
+  },
+  {
+   "fieldname": "column_break_iarl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "auto_close_tickets",
+   "fieldtype": "Check",
+   "label": "Automatically Close Replied Tickets"
+  },
+  {
+   "default": "14",
+   "depends_on": "auto_close_tickets",
+   "fieldname": "auto_close_after_days",
+   "fieldtype": "Int",
+   "label": "Auto-close after (Days)",
+   "mandatory_depends_on": "auto_close_tickets"
+  }
+ ],
+ "grid_page_length": 50,
+ "issingle": 1,
+ "links": [],
+ "modified": "2025-04-23 20:17:23.058689",
+ "modified_by": "Administrator",
+ "module": "Helpdesk",
+ "name": "HD Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Agent",
+   "share": 1
+  }
+ ],
+ "quick_entry": 1,
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
