@@ -1,3 +1,5 @@
+> **Fork notice:** This repository is a copy of [frappe/helpdesk](https://github.com/frappe/helpdesk), maintained by its original authors. All credit for the original work goes to them. It's licensed under the upstream project's license (AGPL-3.0).
+
 <div align="center" markdown="1">
 
 <img src=".github/hd-logo.svg" alt="Frappe Helpdesk logo" width="80"/>
