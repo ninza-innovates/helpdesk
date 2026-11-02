@@ -119,7 +119,7 @@ wget https://frappe.io/easy-install.py
 ```bash
 python3 ./easy-install.py deploy \
     --project=helpdesk_prod_setup \
-    --email=your_email.example.com \
+    --email=your_email@example.com \
     --image=ghcr.io/frappe/helpdesk \
     --version=stable \
     --app=helpdesk \
@@ -127,7 +127,7 @@ python3 ./easy-install.py deploy \
 ```
 
 Replace the following parameters with your values:
-- `your_email.example.com`: Your email address
+- `your_email@example.com`: Your email address
 - `subdomain.domain.tld`: Your domain name where Helpdesk will be hosted
 
 The script will set up a production-ready instance of Frappe Helpdesk with all the necessary configurations in about 5 minutes.
